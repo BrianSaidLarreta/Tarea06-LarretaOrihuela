@@ -38,6 +38,16 @@ blogs.find({},function(error, b){
     console.log(b);
 });
 
+User.find({_id:'5d18e8fb5e02932ea09f997c'},function(error,  docs){
+    if(error){
+        console.log(error);
+        process.exit(1);
+    }
+    console.log("<---- Consulta Específica ---->");
+    console.log(docs);
+});
+
+
 Blogs.update({_id:'5d18e8fb5e02932ea09f997c'},
         {$set:{
             title: 'Tarea 0.6' ,
